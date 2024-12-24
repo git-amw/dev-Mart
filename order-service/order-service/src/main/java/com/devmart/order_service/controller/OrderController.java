@@ -1,0 +1,29 @@
+package com.devmart.order_service.controller;
+
+import com.devmart.order_service.dto.OrderRequest;
+import com.devmart.order_service.service.OrderService;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/order")
+@RequiredArgsConstructor
+public class OrderController {
+
+    private final OrderService orderService;
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public String placeOrder(@RequestBody OrderRequest orderRequest) {
+        orderService.placeOrder(orderRequest);
+        return "Order placed";
+    }
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public String Health() {
+        return "Up and running";
+    }
+}

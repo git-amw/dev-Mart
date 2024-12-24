@@ -1,0 +1,33 @@
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Spring Boot specific
+target/
+*.log
+*.jar
+*.war
+*.ear
+
+# Maven specific
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+
+# Gradle specific
+.gradle/
+build/
+
+# Java specific
+*.class
+*.jar
+*.war
+*.ear
+
+# Other IDEs
+.vscode/
